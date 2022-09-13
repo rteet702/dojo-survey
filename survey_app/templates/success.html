@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container py-5">
+        <h1>Submitted Info</h1>
+        <div class="row">
+            <div class="col">
+                <p>Name:</p>
+                <p>Dojo Location:</p>
+                <p>Favorite Language:</p>
+                <p>Comment:</p>
+            </div>
+            <div class="col">
+                <p>{{ name }}</p>
+                <p>{{ location }}</p>
+                <p>{{ language }}</p>
+                <p>{{ comment }}</p>
+            </div>
+        </div>
+        <p><a href="/">Go back</a></p>
+    </div>
+</body>
+</html>

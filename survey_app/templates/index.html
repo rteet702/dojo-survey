@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container py-5">
+        <form action="/submit" method="post" class="w-50 mx-auto mt-5 p-5 rounded-3 shadow">
+            {% csrf_token %}
+            <!-- name -->
+            <label for="name" class="form-label fs-2">Your Name:</label>
+            <input type="text" id="name" name="name" class="form-control">
+            <!-- location -->
+            <label for="location" class="form-label fs-2">Location:</label>
+            <select name="location" id="location" class="form-select">
+                <option selected="" disabled>Open this select menu</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Austin">Austin</option>
+                <option value="Denver">Denver</option>
+            </select>
+            <!-- favorite -->
+            <label for="language" class="form-label fs-2">Favorite Language:</label>
+            <select name="language" id="language" class="form-select">
+                <option selected="" disabled>Open this select menu</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Javascript">Javascript</option>
+            </select>
+            <!-- comments -->
+            <label for="comment" class="form-label fs-2">Comments:</label>
+            <textarea name="comment" id="" class="form-control mb-3" rows="10"></textarea>
+            <!-- submit -->
+            <input type="submit" value="Submit" class="btn btn-primary float-end">
+        </form>
+    </div>
+</body>
+</html>
